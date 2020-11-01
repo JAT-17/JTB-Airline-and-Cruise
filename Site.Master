@@ -9,6 +9,8 @@
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <%--My CSS--%>
     <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+    <%--FontAwesome CSS--%>
+    <link href="FontAwesome/css/all.css" rel="stylesheet" />
     <%--jquery--%>
     <script src="Bootstrap/js/jquery-3.5.1.slim.min.js"></script>
     <%--Popper js--%>
@@ -23,7 +25,7 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light">
-               <a class="navbar-brand" href="#">
+               <a class="navbar-brand" href="Default.aspx">
                    <asp:Image ID="image1" runat="server" ImageUrl="Online%20Flight%20and%20Cruise/logo.png" Width="100px" />
                    JTB Airline & Cruise
                </a>
@@ -35,19 +37,19 @@
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="AboutUs.aspx">About</a>
+                            <a class="nav-link" href="About.aspx">About</a>
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="ContactUs.aspx">Contact</a>
+                            <a class="nav-link" href="Contact.aspx">Contact</a>
                         </li>
 
                          <li class="nav-item active">
-                            <a class="nav-link" href="UserLogin.aspx">Login</a>
+                            <a class="nav-link" href="#">Login</a>
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="UserRegister.aspx">Register</a>
+                            <a class="nav-link" href="#">Register</a>
                         </li>
 
                        </ul>
@@ -60,10 +62,66 @@
                
 
            </div>
+
                 <div id="content">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
+
+        <footer>
+
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                       <p></p>
+                       <p></p>
+                       <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center footer-main">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                        <p class="text-center" style="color:gold">Follow Our Social Media Pages</p>
+                    </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="Contact.aspx">CONTACT US</a></li>
+                        <li><a href="Default.aspx">HOME</a></li>
+                        <li><a href="About.aspx">ABOUT US</a></li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <div class="Details">
+                        <p class="icn"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; 64 Knutsford Blvd, Kingston</p>
+                        <p class="inc"><i class="fa fa-phone"></i>&nbsp;&nbsp;  (876) 929-9200</p>
+                        <p class="inc"><i class="fa fa-envelope"></i>&nbsp;&nbsp;  info@visitjamaica.com</p>
+                    </div>
+                </div>
+                        
+               </div>
+            </div>
+           
+               
+            
+
+            <div id="footer3" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All Rights Reversed. <a class="footerlinks" href="#" target="_blank">Jamaica Tourist Board</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
             
     </form>
 </body>
