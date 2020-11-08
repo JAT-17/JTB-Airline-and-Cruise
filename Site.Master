@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <title>Jamaica Tourist Board Airline & Cruise</title>
-     <%--Bootstrap css--%>
+     <%--Bootstrap css---%>
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <%--My CSS--%>
     <link href="css/CustomStyleSheet.css" rel="stylesheet" />
