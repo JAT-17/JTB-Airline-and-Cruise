@@ -2,84 +2,127 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title>Jamaica Tourist Board Airline & Cruise</title>
+     <%--Bootstrap css--%>
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--My CSS--%>
+    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+    <%--FontAwesome CSS--%>
+    <link href="FontAwesome/css/all.css" rel="stylesheet" />
+    <%--jquery--%>
+    <script src="Bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <%--Popper js--%>
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <%--Bootstrap js--%>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+               <a class="navbar-brand" href="Default.aspx">
+                   <asp:Image ID="image1" runat="server" ImageUrl="Online%20Flight%20and%20Cruise/logo.png" Width="100px" />
+                   JTB Airline & Cruise
+               </a>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Reservation</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="About.aspx">About</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Contact.aspx">Contact</a>
+                        </li>
+
+                         <li class="nav-item active">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Register</a>
+                        </li>
+
+                       </ul>
+                    </div>
+
+             </nav>
+         
+               
+              
+               
+
+           </div>
+
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+
+        <footer>
+
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                       <p></p>
+                       <p></p>
+                       <p></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - JTB Airline & Cruise</p>
-            </footer>
-        </div>
+
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center footer-main">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                        <p class="text-center" style="color:gold">Follow Our Social Media Pages</p>
+                    </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="Contact.aspx">CONTACT US</a></li>
+                        <li><a href="Default.aspx">HOME</a></li>
+                        <li><a href="About.aspx">ABOUT US</a></li>
+                    </ul>
+                    <br>
+                    <hr>
+                    <div class="Details">
+                        <p class="icn"><i class="fa fa-map-marker"></i>&nbsp;&nbsp; 64 Knutsford Blvd, Kingston</p>
+                        <p class="inc"><i class="fa fa-phone"></i>&nbsp;&nbsp;  (876) 929-9200</p>
+                        <p class="inc"><i class="fa fa-envelope"></i>&nbsp;&nbsp;  info@visitjamaica.com</p>
+                    </div>
+                </div>
+                        
+               </div>
+            </div>
+           
+               
+            
+
+            <div id="footer3" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All Rights Reversed. <a class="footerlinks" href="#" target="_blank">Jamaica Tourist Board</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+            
     </form>
 </body>
 </html>
