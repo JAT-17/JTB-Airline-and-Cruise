@@ -176,9 +176,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CruiseReservations.aspx" />
     <Content Include="css\CustomStyleSheet.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="FlightReservations.aspx" />
     <Content Include="FontAwesome\css\all.css" />
     <Content Include="FontAwesome\css\all.min.css" />
     <Content Include="FontAwesome\css\brands.css" />
@@ -2045,12 +2047,26 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CruiseReservations.aspx.cs">
+      <DependentUpon>CruiseReservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CruiseReservations.aspx.designer.cs">
+      <DependentUpon>CruiseReservations.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlightReservations.aspx.cs">
+      <DependentUpon>FlightReservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlightReservations.aspx.designer.cs">
+      <DependentUpon>FlightReservations.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
