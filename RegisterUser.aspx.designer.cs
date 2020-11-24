@@ -11,53 +11,53 @@ namespace JTB_Airline_and_Cruise
 {
 
 
-    public partial class FlightReservations
+    public partial class RegisterUser
     {
 
         /// <summary>
-        /// Label control.
+        /// TxtFN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label;
+        protected global::System.Web.UI.WebControls.TextBox TxtFN;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// TxtLN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox TxtLN;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// Txtemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.TextBox Txtemail;
 
         /// <summary>
-        /// TxtDepartDate control.
+        /// TxtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDepartDate;
+        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
 
         /// <summary>
-        /// TxtReturnDate control.
+        /// TxtPassword2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtReturnDate;
+        protected global::System.Web.UI.WebControls.TextBox TxtPassword2;
 
         /// <summary>
         /// Button1 control.
