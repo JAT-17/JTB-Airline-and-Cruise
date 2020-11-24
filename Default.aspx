@@ -44,7 +44,7 @@
 
         <div class="col-md-6 col-sm-6" style="margin-bottom:8px">
             <div class="img-thumbnail product-item" style="height:250px">
-                <a href="#"><img class="img-responsive" title="Click to Book a Flight" 
+                <a href="FlightReservations"><img class="img-responsive" title="Click to Book a Flight" 
                     style="cursor:pointer;height:100px;width:200px"
                     src="Online%20Flight%20and%20Cruise/airplaneicon.jpg" /></a>
                 <hr />
@@ -57,7 +57,7 @@
 
         <div class="col-md-6 col-sm-6" style="margin-bottom:8px">
             <div class="img-thumbnail product-item" style="height:250px">
-                <a href="#"><img class="img-responsive" title="Click to Book A Cruise" 
+                <a href="CruiseReservations.aspx"><img class="img-responsive" title="Click to Book A Cruise" 
                     style="cursor:pointer;height:100px;width:200px"
                     src="Online%20Flight%20and%20Cruise/cruiseshipicon.jpg" /></a>
                 <hr />

@@ -34,18 +34,54 @@
                             <div class="col">
                                 <label>Country</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TxtCountry" runat="server"></asp:TextBox>
+                                    <asp:DropDownList class="form-group" ID="DropDownList1"  runat="server">
+                                        <asp:ListItem Text="Select" Value="select" />
+                                        <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International" />
+                                        <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
+                                        <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International" />
+                                        <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="Los Angeles International" />
+                                        <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="JFK International" />
+                                        <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International" />
+                                        <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International" />
+                                        <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International" />
+                                        <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International" />
+                                        <asp:ListItem Text="Heathrow Airport - United Kingdom" Value="Harthrow" />
+                                  
+                                    </asp:DropDownList>
                                 </div>
 
                                 <label>City</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TxtCity" runat="server"></asp:TextBox>
+                                    <asp:DropDownList class="form-group" ID="DropDownList2"  runat="server">
+                                        <asp:ListItem Text="Select" Value="select" />
+                                        <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International" />
+                                        <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
+                                        <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International" />
+                                        <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="Los Angeles International" />
+                                        <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="JFK International" />
+                                        <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International" />
+                                        <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International" />
+                                        <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International" />
+                                        <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International" />
+                                        <asp:ListItem Text="Heathrow Airport - United Kingdom" Value="Harthrow" />
+                                    </asp:DropDownList>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <label>Departure Date</label>
+                                        <div class="form-group">
+                                            <asp:TextBox CssClass="form-control" ID="TxtDepartDate" runat="server" TextMode="Date"></asp:TextBox>
+                                        </div>
+                                    </div>
 
-                                 <label>Date of Flight</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TxtDate" runat="server" TextMode="Date"></asp:TextBox>
+                                    <div class="col-md-6">
+                                    <label>Return Date</label>
+                                        <div class="form-group">
+                                            <asp:TextBox CssClass="form-control" ID="TxtReturnDate" runat="server" TextMode="Date"></asp:TextBox>
+                                        </div>
+                                    </div>
                                 </div>
+                                 
 
                                 <div class="form-group">
                                     <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="View Available Flights" />
