@@ -5,10 +5,6 @@ using System.Web;
 
 namespace JTB_Airline_and_Cruise
 {
-
-
-
-
     public class ReservationInfo
     {
         public string AirLine { get; set; }
