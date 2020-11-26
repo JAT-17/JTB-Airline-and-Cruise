@@ -33,6 +33,15 @@ namespace JTB_Airline_and_Cruise
         protected global::System.Web.UI.WebControls.TextBox TxtLN;
 
         /// <summary>
+        /// DOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DOB;
+
+        /// <summary>
         /// Txtemail control.
         /// </summary>
         /// <remarks>

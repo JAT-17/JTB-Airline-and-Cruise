@@ -38,12 +38,19 @@
                           </div>
 
                          <div class="row">
-                           <div class="col">
+                            <div class="col-md-6">
+                                <label>Date of Birth</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="DOB" runat="server" TextMode="Date"></asp:TextBox>
+                                </div>
+                            </div>
+                           <div class="col-md-6">
                                <label>Email Address</label>
                              <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="Txtemail" runat="server" placeholder="Email Address" TextMode="Email"></asp:TextBox>
                              </div>
                            </div>
+                            
                         </div>
                          <div class="row">
                             <div class="col-md-6">
