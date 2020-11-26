@@ -2447,6 +2447,7 @@
     </Compile>
     <Compile Include="Airline_WebService.asmx.cs">
       <DependentUpon>Airline_WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -2475,6 +2476,7 @@
     </Compile>
     <Compile Include="CustomErrorPage.aspx.cs">
       <DependentUpon>CustomErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CustomErrorPage.aspx.designer.cs">
       <DependentUpon>CustomErrorPage.aspx</DependentUpon>
@@ -2506,6 +2508,7 @@
     <Compile Include="RegisterUser.aspx.designer.cs">
       <DependentUpon>RegisterUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReservationInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
