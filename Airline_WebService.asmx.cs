@@ -25,7 +25,7 @@ namespace JTB_Airline_and_Cruise
         public DataSet GetResevationDataFromDB(string Departure, string Location , string StartDate, string Departure_Date)
         {
             DataSet ds = new DataSet();
-            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection sqlconn = new SqlConnection(dbconnection))
             {
                 
@@ -73,17 +73,6 @@ namespace JTB_Airline_and_Cruise
 
 
 
-        [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
-
-
-        [WebMethod]
-        public int Add(int a , int b)
-        {                   
-            return a+b;
-        }
+       
     }
 }

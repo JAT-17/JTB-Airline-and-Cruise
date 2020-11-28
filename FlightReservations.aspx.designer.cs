@@ -24,22 +24,22 @@ namespace JTB_Airline_and_Cruise
         protected global::System.Web.UI.WebControls.Label Label;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// CountryDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList CountryDropDownList;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// CityDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList CityDropDownList;
 
         /// <summary>
         /// TxtDepartDate control.
@@ -60,12 +60,12 @@ namespace JTB_Airline_and_Cruise
         protected global::System.Web.UI.WebControls.TextBox TxtReturnDate;
 
         /// <summary>
-        /// Button1 control.
+        /// SearchForFlightbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button SearchForFlightbtn;
     }
 }
