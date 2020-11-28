@@ -34,7 +34,7 @@
                             <div class="col">
                                 <label>Country</label>
                                 <div class="form-group">
-                                    <asp:DropDownList class="form-group" ID="DropDownList1"  runat="server">
+                                    <asp:DropDownList class="form-group" ID="CountryDropDownList"  runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
                                         <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International" />
                                         <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
@@ -52,7 +52,7 @@
 
                                 <label>City</label>
                                 <div class="form-group">
-                                    <asp:DropDownList class="form-group" ID="DropDownList2"  runat="server">
+                                    <asp:DropDownList class="form-group" ID="CityDropDownList"  runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
                                         <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International" />
                                         <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
@@ -84,7 +84,7 @@
                                  
 
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="View Available Flights" />
+                                    <asp:Button class="btn btn-success btn-block btn-lg" ID="SearchForFlightbtn" runat="server" Text="View Available Flights" OnClick="SearchForFlightbtn_Click" />
                                 </div>
 
                                 

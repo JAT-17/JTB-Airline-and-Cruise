@@ -50,6 +50,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -258,6 +260,12 @@
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\jquery-3.5.1.slim.min.js" />
     <Content Include="Bootstrap\js\popper.min.js" />
+    <None Include="Connected Services\AirLine_Service_Reference\configuration91.svcinfo" />
+    <None Include="Connected Services\AirLine_Service_Reference\configuration.svcinfo" />
+    <None Include="Connected Services\AirLine_Service_Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -2120,6 +2128,8 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="Connected Services\AirLine_Service_Reference\Airline_WebService.wsdl" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Online Flight and Cruise\airplaneicon.jpg" />
     <Content Include="Online Flight and Cruise\Cruiseship.jpg" />
@@ -2304,6 +2314,7 @@
     <Content Include="packages\WebGrease.1.6.0\lib\WebGrease.dll" />
     <Content Include="packages\WebGrease.1.6.0\tools\WG.EXE" />
     <Content Include="RegisterUser.aspx" />
+    <Content Include="ReservationCart.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -2460,6 +2471,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Connected Services\AirLine_Service_Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2508,6 +2524,13 @@
     <Compile Include="RegisterUser.aspx.designer.cs">
       <DependentUpon>RegisterUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReservationCart.aspx.cs">
+      <DependentUpon>ReservationCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReservationCart.aspx.designer.cs">
+      <DependentUpon>ReservationCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReservationInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -2553,6 +2576,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AirLine_Service_Reference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
