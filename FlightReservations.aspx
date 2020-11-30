@@ -39,15 +39,15 @@
                                     <asp:DropDownList class="form-group" ID="CountryDropDownList"  runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
                                         <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International Airport - Montego Bay, Jamaica" />
-                                        <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
-                                        <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International" />
-                                        <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="Los Angeles International" />
-                                        <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="JFK International" />
-                                        <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International" />
-                                        <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International" />
-                                        <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International" />
-                                        <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International" />
-                                        <asp:ListItem Text="Heathrow Airport - United Kingdom" Value="Harthrow" />
+                                        <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International Airport - Kingston, Jamaica" />
+                                        <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International Airport - Ocho Rios, Jamaica" />
+                                        <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="LAX - Los Angeles, California, United States" />
+                                        <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="John F. Kennedy International Airport - New York City, United States" />
+                                        <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International Airport - Miami, Florida, United States" />
+                                        <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International Airport - Toronto, Canada" />
+                                        <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International Airport - Vancouver, Canada" />
+                                        <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International Airport - Calgary, Canada" />
+                                        <asp:ListItem Text="Heathrow Airport - United Kingdom" Value="Heathrow Airport - United Kingdom" />
                                   
                                     </asp:DropDownList>
                                 </div>
@@ -57,22 +57,22 @@
                                     <asp:DropDownList class="form-group" ID="CityDropDownList"  runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
                                         <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International Airport - Montego Bay, Jamaica" />
-                                        <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
-                                        <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International" />
-                                        <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="Los Angeles International" />
-                                        <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="JFK International" />
+                                        <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International Airport - Kingston, Jamaica"/>
+                                        <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International Airport - Ocho Rios, Jamaica" />
+                                        <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="LAX - Los Angeles, California, United States" />
+                                        <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="John F. Kennedy International Airport - New York City, United States" />
                                         <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International Airport - Miami, Florida, United States" />
-                                        <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International" />
-                                        <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International" />
-                                        <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International" />
-                                        <asp:ListItem Text="Heathrow Airport - United Kingdom" Value="Harthrow" />
+                                        <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International Airport - Toronto, Canada" />
+                                        <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International Airport - Vancouver, Canada" />
+                                        <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International Airport - Calgary, Canada" />
+                                        <asp:ListItem Text="Heathrow Airport - United Kingdom" Value="Heathrow Airport - United Kingdom" />
                                     </asp:DropDownList>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                     <label>Departure Date</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TxtDepartDate" runat="server" TextMode="Date" OnTextChanged="TxtDepartDate_TextChanged"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TxtDepartDate" runat="server" TextMode="Date"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -90,9 +90,7 @@
                                 </div>
 
 
-                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-
-                                 <asp:GridView ID="GridView1" runat="server" Visible="true"></asp:GridView>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
 
@@ -102,9 +100,11 @@
             </div>
         </div>
     </div>
-   
-     
 
     <br />
     <br />
+
+    <div>
+         <asp:GridView ID="Gridview1" runat="server" Visible="true"></asp:GridView>
+    </div>
 </asp:Content>

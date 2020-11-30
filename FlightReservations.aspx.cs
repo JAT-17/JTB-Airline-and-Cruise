@@ -23,40 +23,24 @@ namespace JTB_Airline_and_Cruise
 
             DataSet ds = new DataSet();
 
-           
-            
+
+
             AirLine_Service_Reference.Airline_WebServiceSoapClient client = new AirLine_Service_Reference.Airline_WebServiceSoapClient();
-            // ObjectToStoreWebServiceDataFromDB = client.GetResevationDataFromDB( CountryDropDownList.ToString(), CityDropDownList.ToString(), TxtDepartDate.ToString(), TxtReturnDate.ToString());
+            ds = client.GetResevationDataFromDB(Convert.ToString(CountryDropDownList.Text), Convert.ToString(CityDropDownList.Text), Convert.ToString(TxtDepartDate.Text), Convert.ToString(TxtReturnDate.Text));
 
 
-           // ds= client.GetResevationDataFromDB(CityDropDownList.ToString(), CountryDropDownList.ToString(),
-                           // TxtDepartDate.ToString(), TxtReturnDate.ToString());
-
-            
-            ds= client.GetResevationDataFromDB(Convert.ToString(CountryDropDownList.Text), Convert.ToString(CityDropDownList.Text),  Convert.ToString(TxtDepartDate.Text), Convert.ToString(TxtReturnDate.Text));
-            
-           
             if (ds==null)
             {
-                TextBox1.Text = "is nulll";
+                Label1.Text = "No Flights Found";
             }
             else
             {
-                
-                TextBox1.Text = CountryDropDownList.SelectedValue + CityDropDownList.SelectedValue  + TxtDepartDate.Text + TxtReturnDate.Text;
+                Session["Result"] = ds;
+                Response.Redirect("ReservationCart.aspx?Result=" + Session["Result"]);
             }
-            GridView1.DataSource = ds;
-            GridView1.DataBind();
-
-            //Session["FilightRes"] = ds;
-            //Response.Redirect("ReservationCart.aspx");
-
 
         }
 
-        protected void TxtDepartDate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

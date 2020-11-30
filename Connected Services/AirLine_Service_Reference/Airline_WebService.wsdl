@@ -26,6 +26,30 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="InsertBookings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Bookin_no" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Airline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departure" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destination" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rAirline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rDeparture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rDestination" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBookingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertBookingsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetResevationDataFromDBSoapIn">
@@ -34,10 +58,20 @@
   <wsdl:message name="GetResevationDataFromDBSoapOut">
     <wsdl:part name="parameters" element="tns:GetResevationDataFromDBResponse" />
   </wsdl:message>
+  <wsdl:message name="InsertBookingsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBookings" />
+  </wsdl:message>
+  <wsdl:message name="InsertBookingsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBookingsResponse" />
+  </wsdl:message>
   <wsdl:portType name="Airline_WebServiceSoap">
     <wsdl:operation name="GetResevationDataFromDB">
       <wsdl:input message="tns:GetResevationDataFromDBSoapIn" />
       <wsdl:output message="tns:GetResevationDataFromDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBookings">
+      <wsdl:input message="tns:InsertBookingsSoapIn" />
+      <wsdl:output message="tns:InsertBookingsSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Airline_WebServiceSoap" type="tns:Airline_WebServiceSoap">
@@ -51,11 +85,29 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertBookings">
+      <soap:operation soapAction="http://JTBAirLineandCruise.com/InsertBookings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Airline_WebServiceSoap12" type="tns:Airline_WebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetResevationDataFromDB">
       <soap12:operation soapAction="http://JTBAirLineandCruise.com/GetResevationDataFromDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBookings">
+      <soap12:operation soapAction="http://JTBAirLineandCruise.com/InsertBookings" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

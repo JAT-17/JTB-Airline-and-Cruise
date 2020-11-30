@@ -22,6 +22,13 @@ namespace JTB_Airline_and_Cruise.AirLine_Service_Reference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://JTBAirLineandCruise.com/GetResevationDataFromDB", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetResevationDataFromDBAsync(string Departure, string Location, string StartDate, string Departure_Date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://JTBAirLineandCruise.com/InsertBookings", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertBookings(int UserId, int Bookin_no, string Airline, string Departure, string Destination, string StartDate, string rAirline, string rDeparture, string rDestination, string enddate, decimal Price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://JTBAirLineandCruise.com/InsertBookings", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertBookingsAsync(int UserId, int Bookin_no, string Airline, string Departure, string Destination, string StartDate, string rAirline, string rDeparture, string rDestination, string enddate, decimal Price);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -57,6 +64,14 @@ namespace JTB_Airline_and_Cruise.AirLine_Service_Reference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetResevationDataFromDBAsync(string Departure, string Location, string StartDate, string Departure_Date) {
             return base.Channel.GetResevationDataFromDBAsync(Departure, Location, StartDate, Departure_Date);
+        }
+        
+        public int InsertBookings(int UserId, int Bookin_no, string Airline, string Departure, string Destination, string StartDate, string rAirline, string rDeparture, string rDestination, string enddate, decimal Price) {
+            return base.Channel.InsertBookings(UserId, Bookin_no, Airline, Departure, Destination, StartDate, rAirline, rDeparture, rDestination, enddate, Price);
+        }
+        
+        public System.Threading.Tasks.Task<int> InsertBookingsAsync(int UserId, int Bookin_no, string Airline, string Departure, string Destination, string StartDate, string rAirline, string rDeparture, string rDestination, string enddate, decimal Price) {
+            return base.Channel.InsertBookingsAsync(UserId, Bookin_no, Airline, Departure, Destination, StartDate, rAirline, rDeparture, rDestination, enddate, Price);
         }
     }
 }
