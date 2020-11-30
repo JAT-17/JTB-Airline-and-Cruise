@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e43b8303-9182-4ded-a087-b266a623a9f0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1c30d4b4-a119-4068-bcca-2d1b2946fab6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="https://localhost:44385/Cruise_WebService.asmx?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Cruise_WebService.wsdl" MetadataType="Wsdl" ID="148904cd-53e1-43c7-ae76-0b88f433c9f1" SourceId="1" SourceUrl="https://localhost:44385/Cruise_WebService.asmx?WSDL" />
+    <MetadataFile FileName="Cruise_WebService.wsdl" MetadataType="Wsdl" ID="5eccd12f-c58f-4edf-b44c-3963fdc0711f" SourceId="1" SourceUrl="https://localhost:44385/Cruise_WebService.asmx?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

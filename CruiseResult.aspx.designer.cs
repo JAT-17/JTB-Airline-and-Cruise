@@ -11,52 +11,70 @@ namespace JTB_Airline_and_Cruise
 {
 
 
-    public partial class CruiseReservations
+    public partial class CruiseResult
     {
 
         /// <summary>
-        /// Label control.
+        /// GridView3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label;
+        protected global::System.Web.UI.WebControls.GridView GridView3;
 
         /// <summary>
-        /// TxtCheckIn control.
+        /// L1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCheckIn;
+        protected global::System.Web.UI.WebControls.Label L1;
 
         /// <summary>
-        /// TxtCheckOut control.
+        /// L2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCheckOut;
+        protected global::System.Web.UI.WebControls.Label L2;
 
         /// <summary>
-        /// Button1 control.
+        /// L3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label L3;
 
         /// <summary>
-        /// Label1 control.
+        /// L4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label L4;
+
+        /// <summary>
+        /// L5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label L5;
+
+        /// <summary>
+        /// L6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label L6;
     }
 }

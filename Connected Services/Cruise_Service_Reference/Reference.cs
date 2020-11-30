@@ -22,6 +22,13 @@ namespace JTB_Airline_and_Cruise.Cruise_Service_Reference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCruiseDataFromDB", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetCruiseDataFromDBAsync(string CheckIn, string CheckOut);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertBookings", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertBookings(int UserId, int Bookin_no, int cruiseNum, string Ship, string Destination, string Checkin, string Checkout, decimal Price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertBookings", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertBookingsAsync(int UserId, int Bookin_no, int cruiseNum, string Ship, string Destination, string Checkin, string Checkout, decimal Price);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -57,6 +64,14 @@ namespace JTB_Airline_and_Cruise.Cruise_Service_Reference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetCruiseDataFromDBAsync(string CheckIn, string CheckOut) {
             return base.Channel.GetCruiseDataFromDBAsync(CheckIn, CheckOut);
+        }
+        
+        public int InsertBookings(int UserId, int Bookin_no, int cruiseNum, string Ship, string Destination, string Checkin, string Checkout, decimal Price) {
+            return base.Channel.InsertBookings(UserId, Bookin_no, cruiseNum, Ship, Destination, Checkin, Checkout, Price);
+        }
+        
+        public System.Threading.Tasks.Task<int> InsertBookingsAsync(int UserId, int Bookin_no, int cruiseNum, string Ship, string Destination, string Checkin, string Checkout, decimal Price) {
+            return base.Channel.InsertBookingsAsync(UserId, Bookin_no, cruiseNum, Ship, Destination, Checkin, Checkout, Price);
         }
     }
 }

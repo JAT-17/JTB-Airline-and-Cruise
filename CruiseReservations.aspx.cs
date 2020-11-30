@@ -14,12 +14,6 @@ namespace JTB_Airline_and_Cruise
         {
 
 
-
-
-
-
-
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -42,16 +36,9 @@ namespace JTB_Airline_and_Cruise
             }
             else
             {
-
-                Label1.Text = TxtCheckIn.Text + TxtCheckOut.Text;
+                Session["CruiseResult"] = ds;
+                Response.Redirect("CruiseResult.aspx?=" + Session["CruiseResult"]);
             }
-            Cruise_GridView.DataSource = ds;
-            Cruise_GridView.DataBind();
-
-
-
-
-
 
         }
     }

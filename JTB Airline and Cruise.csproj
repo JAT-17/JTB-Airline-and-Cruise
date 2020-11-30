@@ -279,6 +279,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CruiseReservations.aspx" />
+    <Content Include="CruiseResult.aspx" />
     <Content Include="Cruise_WebService.asmx" />
     <Content Include="css\CustomStyleSheet.css" />
     <Content Include="CustomErrorPage.aspx" />
@@ -2502,6 +2503,13 @@
     </Compile>
     <Compile Include="CruiseReservations.aspx.designer.cs">
       <DependentUpon>CruiseReservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CruiseResult.aspx.cs">
+      <DependentUpon>CruiseResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CruiseResult.aspx.designer.cs">
+      <DependentUpon>CruiseResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cruise_WebService.asmx.cs">
       <DependentUpon>Cruise_WebService.asmx</DependentUpon>

@@ -24,7 +24,7 @@ namespace JTB_Airline_and_Cruise
         public DataSet GetCruiseDataFromDB(string CheckIn, string CheckOut)
         {
             DataSet ds = new DataSet();
-            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection sqlconn = new SqlConnection(dbconnection))
             {
 
@@ -57,6 +57,36 @@ namespace JTB_Airline_and_Cruise
             }
 
             return ds;
+        }
+
+        [WebMethod]
+        public int InsertBookings(int UserId, int Bookin_no, int cruiseNum, string Ship, string Destination, string Checkin, string Checkout, Decimal Price)
+        {
+            int retRecord = 0;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(dbconnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("bookC", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("User", SqlDbType.Int).Value = UserId;
+                    cmd.Parameters.Add("Book", SqlDbType.Int).Value = Bookin_no;
+                    cmd.Parameters.Add("Cruise", SqlDbType.Int).Value = cruiseNum;
+                    cmd.Parameters.Add("Ship", SqlDbType.VarChar, 100).Value = Ship;
+                    cmd.Parameters.Add("Dest", SqlDbType.VarChar, 100).Value = Destination;
+                    cmd.Parameters.Add("checkin", SqlDbType.VarChar, 100).Value = Checkin;
+                    cmd.Parameters.Add("checkout", SqlDbType.VarChar, 100).Value = Checkout;
+                    cmd.Parameters.Add("price", SqlDbType.Decimal, 2).Value = Price;
+
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    retRecord = cmd.ExecuteNonQuery();
+                }
+                return retRecord;
+            }
         }
 
     }
