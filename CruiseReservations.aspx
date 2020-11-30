@@ -46,7 +46,7 @@
                                     <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="View Cruises" OnClick="Button1_Click" />
                                 </div>
 
-                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
 
@@ -56,10 +56,7 @@
             </div>
         </div>
     </div>
-    
-    <div>
-    <asp:GridView ID="Cruise_GridView" runat="server"></asp:GridView>
-    </div>
+ 
     <br />
     <br />
 </asp:Content>

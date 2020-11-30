@@ -29,7 +29,7 @@ namespace JTB_Airline_and_Cruise
             string Userid;
             Userid = new string(myArray);
             Session["user"] = Userid;
-            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection con = new SqlConnection(dbconnection))
             {
                 SqlCommand cmd = new SqlCommand("insert into Users" + "(Users_id,FirstName,LastName,Email,Password,DOB)values(@userid,@Firstname,@Lastname,@Email,@Password,@DOB)", con);

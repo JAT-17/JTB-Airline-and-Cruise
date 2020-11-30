@@ -25,7 +25,7 @@ namespace JTB_Airline_and_Cruise
         public DataSet GetResevationDataFromDB(string Departure, string Location , string StartDate, string Departure_Date)
         {
             DataSet ds = new DataSet();
-            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection sqlconn = new SqlConnection(dbconnection))
             {
                 
@@ -74,7 +74,7 @@ namespace JTB_Airline_and_Cruise
         public int InsertBookings(int UserId, int Bookin_no, string Airline, string Departure, string Destination, string StartDate, string rAirline, string rDeparture, string rDestination, string enddate, Decimal Price)
         {
             int retRecord = 0;
-            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection con = new SqlConnection(dbconnection))
             {
                 using (SqlCommand cmd = new SqlCommand("InsertBooking", con))

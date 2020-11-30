@@ -1,25 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReservationCart.aspx.cs" Inherits="JTB_Airline_and_Cruise.ReservationCart" %>
-
+﻿<%@ Page Title="Result" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CruiseResult.aspx.cs" Inherits="JTB_Airline_and_Cruise.CruiseResult" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
     <br />
     <br />
 
 <div>
-    <asp:GridView class="table table-striped table-bordered" ID="GridView2" runat="server" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+    <asp:GridView class="table table-striped table-bordered" ID="GridView3" runat="server" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
         <Columns>
-            <asp:CommandField SelectText="BOOK FLIGHT" ShowSelectButton="True">
+            <asp:CommandField SelectText="BOOK CRUISE" ShowSelectButton="True">
             <ItemStyle ForeColor="#0B610B" />
             </asp:CommandField>
         </Columns>
-       
+
     </asp:GridView>
-   
-</div>
-
-    <br />
-
-    <table style="width:100%">
+    </div>
+    <br /><br /><br /><br />
+    <div> 
+<table style="width:100%">
   <tr>
       <td>
                 <asp:Label ID="L1" runat="server" Text=""></asp:Label>
@@ -33,17 +30,12 @@
                 <asp:Label ID="L5" runat="server" Text=""></asp:Label>
                  &emsp;
                 <asp:Label ID="L6" runat="server" Text=""></asp:Label>
-                 &emsp;
-                <asp:Label ID="L7" runat="server" Text=""></asp:Label>
-                 &emsp;
-                <asp:Label ID="L8" runat="server" Text=""></asp:Label>
-                 &emsp;
-                <asp:Label ID="L9" runat="server" Text=""></asp:Label>
           </td>
         </tr>
     </table>
+    </div>
+     
     <br />
-    <br />
-
 
 </asp:Content>
+

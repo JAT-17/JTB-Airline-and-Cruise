@@ -17,7 +17,7 @@ namespace JTB_Airline_and_Cruise
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection con = new SqlConnection(dbconnection))
             {
                 if (con.State == ConnectionState.Closed)
@@ -37,6 +37,7 @@ namespace JTB_Airline_and_Cruise
                         Session["Uid"] = dr.GetValue(0).ToString();
                         Session["role"] = "User";
                         Response.Redirect("ReservationCart.aspx?=" + Session["Uid"]);
+                        Response.Redirect("CruiseResult.aspx?=" + Session["Uid"]);
                     }
                 }
                 else
