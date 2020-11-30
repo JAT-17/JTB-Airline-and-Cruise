@@ -4,7 +4,7 @@
 
     <asp:Panel ID="Panel1" runat="server">
 
-        Session["ReservationDetails"]
+     
 
     </asp:Panel>
 
