@@ -17,7 +17,7 @@ namespace JTB_Airline_and_Cruise
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection con = new SqlConnection(dbconnection))
             {
                 if (con.State == ConnectionState.Closed)

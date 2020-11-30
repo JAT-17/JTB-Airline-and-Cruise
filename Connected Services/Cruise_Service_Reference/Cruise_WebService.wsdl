@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCruiseDataFromDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckIn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckOut" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCruiseDataFromDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCruiseDataFromDBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCruiseDataFromDBSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCruiseDataFromDB" />
+  </wsdl:message>
+  <wsdl:message name="GetCruiseDataFromDBSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCruiseDataFromDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Cruise_WebServiceSoap">
+    <wsdl:operation name="GetCruiseDataFromDB">
+      <wsdl:input message="tns:GetCruiseDataFromDBSoapIn" />
+      <wsdl:output message="tns:GetCruiseDataFromDBSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Cruise_WebServiceSoap" type="tns:Cruise_WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCruiseDataFromDB">
+      <soap:operation soapAction="http://tempuri.org/GetCruiseDataFromDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Cruise_WebServiceSoap12" type="tns:Cruise_WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCruiseDataFromDB">
+      <soap12:operation soapAction="http://tempuri.org/GetCruiseDataFromDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Cruise_WebService">
+    <wsdl:port name="Cruise_WebServiceSoap" binding="tns:Cruise_WebServiceSoap">
+      <soap:address location="https://localhost:44385/Cruise_WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Cruise_WebServiceSoap12" binding="tns:Cruise_WebServiceSoap12">
+      <soap12:address location="https://localhost:44385/Cruise_WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

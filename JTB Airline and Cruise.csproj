@@ -266,6 +266,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\Cruise_Service_Reference\configuration91.svcinfo" />
+    <None Include="Connected Services\Cruise_Service_Reference\configuration.svcinfo" />
+    <None Include="Connected Services\Cruise_Service_Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -273,6 +279,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CruiseReservations.aspx" />
+    <Content Include="Cruise_WebService.asmx" />
     <Content Include="css\CustomStyleSheet.css" />
     <Content Include="CustomErrorPage.aspx" />
     <Content Include="Default.aspx" />
@@ -2130,6 +2137,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Connected Services\AirLine_Service_Reference\Airline_WebService.wsdl" />
+    <None Include="Connected Services\Cruise_Service_Reference\Cruise_WebService.wsdl" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Online Flight and Cruise\airplaneicon.jpg" />
     <Content Include="Online Flight and Cruise\Cruiseship.jpg" />
@@ -2476,6 +2484,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\Cruise_Service_Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2489,6 +2502,9 @@
     </Compile>
     <Compile Include="CruiseReservations.aspx.designer.cs">
       <DependentUpon>CruiseReservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cruise_WebService.asmx.cs">
+      <DependentUpon>Cruise_WebService.asmx</DependentUpon>
     </Compile>
     <Compile Include="CustomErrorPage.aspx.cs">
       <DependentUpon>CustomErrorPage.aspx</DependentUpon>
@@ -2582,6 +2598,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AirLine_Service_Reference\" />
+    <WCFMetadataStorage Include="Connected Services\Cruise_Service_Reference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
