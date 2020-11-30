@@ -25,7 +25,7 @@ namespace JTB_Airline_and_Cruise
         public DataSet GetResevationDataFromDB(string Departure, string Location , string StartDate, string Departure_Date)
         {
             DataSet ds = new DataSet();
-            string dbconnection = ConfigurationManager.ConnectionStrings["JTBAirlineandCruiseDBConnection"].ConnectionString;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
             using (SqlConnection sqlconn = new SqlConnection(dbconnection))
             {
                 
@@ -70,9 +70,38 @@ namespace JTB_Airline_and_Cruise
             return ds;
         }
 
+        [WebMethod]
+        public int InsertBookings(int UserId, int Bookin_no, string Airline, string Departure, string Destination, string StartDate, string rAirline, string rDeparture, string rDestination, string enddate, Decimal Price)
+        {
+            int retRecord = 0;
+            string dbconnection = ConfigurationManager.ConnectionStrings["AirlineandCruiseDBConnection"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(dbconnection))
+            {
+                using (SqlCommand cmd = new SqlCommand("InsertBooking", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("UserId", SqlDbType.Int).Value = UserId;
+                    cmd.Parameters.Add("Bookin_no", SqlDbType.Int).Value = Bookin_no;
+                    cmd.Parameters.Add("Airline", SqlDbType.VarChar, 100).Value = Airline;
+                    cmd.Parameters.Add("Departure", SqlDbType.VarChar, 100).Value = Departure;
+                    cmd.Parameters.Add("Destination", SqlDbType.VarChar, 100).Value = Destination;
+                    cmd.Parameters.Add("StartDate", SqlDbType.VarChar, 100).Value = StartDate;
+                    cmd.Parameters.Add("rAirline", SqlDbType.VarChar, 100).Value = rAirline;
+                    cmd.Parameters.Add("rDeparture", SqlDbType.VarChar, 100).Value = rDeparture;
+                    cmd.Parameters.Add("rDestination", SqlDbType.VarChar, 100).Value = rDestination;
+                    cmd.Parameters.Add("enddate", SqlDbType.VarChar, 100).Value = enddate;
+                    cmd.Parameters.Add("Price", SqlDbType.Decimal, 2).Value = Price;
 
 
-
-       
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    retRecord = cmd.ExecuteNonQuery();
+                }
+                return retRecord;
+            }
+           
+        }
     }
-}
+} 
