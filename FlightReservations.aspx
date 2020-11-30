@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
+     
     <table style=" width: 1270px; height:30px;">
         <tr style="background-color: #00ffff">
             <td colspan="2" style=" text-align:center">
@@ -36,7 +38,7 @@
                                 <div class="form-group">
                                     <asp:DropDownList class="form-group" ID="CountryDropDownList"  runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
-                                        <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International" />
+                                        <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International Airport - Montego Bay, Jamaica" />
                                         <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
                                         <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International" />
                                         <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="Los Angeles International" />
@@ -54,12 +56,12 @@
                                 <div class="form-group">
                                     <asp:DropDownList class="form-group" ID="CityDropDownList"  runat="server">
                                         <asp:ListItem Text="Select" Value="select" />
-                                        <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International" />
+                                        <asp:ListItem Text="Sangster International Airport - Montego Bay, Jamaica" Value="Sangster International Airport - Montego Bay, Jamaica" />
                                         <asp:ListItem Text="Norman Manley International Airport - Kingston, Jamaica" Value="Norman Manley International" />
                                         <asp:ListItem Text="Fleming International Airport - Ocho Rios, Jamaica" Value="Fleming International" />
                                         <asp:ListItem Text="LAX - Los Angeles, California, United States" Value="Los Angeles International" />
                                         <asp:ListItem Text="John F. Kennedy International Airport - New York City, United States" Value="JFK International" />
-                                        <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International" />
+                                        <asp:ListItem Text="Miami International Airport - Miami, Florida, United States" Value="Miami International Airport - Miami, Florida, United States" />
                                         <asp:ListItem Text="Toronto Pearson International Airport - Toronto, Canada" Value="Toronto Pearson International" />
                                         <asp:ListItem Text="Vancouver International Airport - Vancouver, Canada" Value="Vancouver International" />
                                         <asp:ListItem Text="Calgary International Airport - Calgary, Canada" Value="Calgary International" />
@@ -70,7 +72,7 @@
                                     <div class="col-md-6">
                                     <label>Departure Date</label>
                                         <div class="form-group">
-                                            <asp:TextBox CssClass="form-control" ID="TxtDepartDate" runat="server" TextMode="Date"></asp:TextBox>
+                                            <asp:TextBox CssClass="form-control" ID="TxtDepartDate" runat="server" TextMode="Date" OnTextChanged="TxtDepartDate_TextChanged"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -87,7 +89,10 @@
                                     <asp:Button class="btn btn-success btn-block btn-lg" ID="SearchForFlightbtn" runat="server" Text="View Available Flights" OnClick="SearchForFlightbtn_Click" />
                                 </div>
 
-                                
+
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
+                                 <asp:GridView ID="GridView1" runat="server" Visible="true"></asp:GridView>
                             </div>
                         </div>
 
@@ -97,6 +102,9 @@
             </div>
         </div>
     </div>
+   
+     
+
     <br />
     <br />
 </asp:Content>
